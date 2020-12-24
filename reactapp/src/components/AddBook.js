@@ -1,5 +1,5 @@
 import React, {Component, useState} from 'react';
-import { useQuery, compose, useMutation } from '@apollo/client';
+import { useQuery, useMutation } from '@apollo/client';
 
 import {getAuthorsQuery,getBooksQuery, addBookMutation} from '../queries/queries';
 
@@ -39,7 +39,8 @@ function AddBookForm() {
             e.preventDefault();
             addBook();
           }}>
-
+              <div><h4>Add Book</h4></div>
+              <hr/>
         <div className="field">
             <label>Book Name:</label>
             <input type="text" value={formState.name} onChange={(e)=> setFormState({

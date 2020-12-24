@@ -17,7 +17,7 @@ code {
   padding: 0 15px;
 }
 
-#add-book{
+#add-book,#add-author{
   position: absolute;
     bottom: 0;
     right: 0;
@@ -26,29 +26,56 @@ code {
     border: 1px solid #000;
     border-radius: 10px 0 0 0;
 }
-
-#add-book .field{
-  margin-bottom: 5px;
+#add-author{
+  top: 0;
+  right: 0;
+  height: 200px;
+  border-radius: 10px 0 0 10px;
 }
 
-#add-book input,select{
+.field{
+  margin-bottom: 5px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap:10px;
+  text-align: right;
+}
+
+input,select{
   border-radius: 4px;
   height: 28px;
   width: 150px;
 }
 
-#add-book label{
+label{
   margin-right: 10px;
-  width: 100px;
   display: block;
   margin-bottom: 5px;
 }
 
-#add-book button{
+button{
   border-radius: 50%;
   font-size: 40px;
   line-height: 40px;
   width: 50px;
   height: 50px;
   margin-top: 10px;
+}
+
+#book-list, .other-books {
+  /* display: grid;
+  grid-template-columns: 1fr 1fr; */
+  max-width: 50%;
+  /* grid-gap: 10px; */
+}
+li{
+  display: inline-block;
+  background: #9cd2b2;
+  padding: 6px;
+  border-radius: 5px;
+  box-shadow: 2px 2px 4px #333;
+  line-height: 30px;
+  height: 30px;
+  margin: 4px;
+  cursor: pointer;
 }
